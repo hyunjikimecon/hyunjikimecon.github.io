@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #fff;
@@ -63,86 +63,171 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px 20px 20px;
+            padding: 40px 20px;
         }
 
-        /* Hero Section with Photo and About */
-        .hero-section {
+        /* Home Page Layout */
+        .home-content {
             display: flex;
-            gap: 40px;
-            align-items: flex-start;
+            gap: 50px;
             margin-bottom: 50px;
-            padding-bottom: 40px;
-            border-bottom: 2px solid #e0e0e0;
         }
 
-        .photo-container {
-            flex-shrink: 0;
+        /* Left Column - Photo */
+        .left-column {
+            flex: 0 0 300px;
         }
 
         .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #e0e0e0;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .about-container {
-            flex: 1;
-        }
-
-        .about-container h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .title {
-            font-size: 1.3em;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-        }
-
-        .intro-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        .intro-text strong {
-            color: #2c3e50;
-        }
-
-        /* Contact Info in Hero */
-        .hero-contact {
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
             background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 8px;
         }
 
-        .hero-contact p {
-            margin: 5px 0;
+        .contact-info h3 {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
             font-size: 0.95em;
         }
 
-        .hero-contact a {
+        .contact-info a {
             color: #3498db;
             text-decoration: none;
         }
 
-        .hero-contact a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
 
-        /* Section Styling */
+        /* Right Column - Content */
+        .right-column {
+            flex: 1;
+        }
+
+        .name-title {
+            margin-bottom: 30px;
+        }
+
+        .name-title h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .name-title .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        /* Biography Section */
+        .biography {
+            margin-bottom: 35px;
+        }
+
+        .biography h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .biography p {
+            margin-bottom: 12px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .biography .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* Interests Section */
+        .interests {
+            margin-bottom: 35px;
+        }
+
+        .interests h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .interests li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .interests li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        /* Education Section */
+        .education {
+            margin-bottom: 35px;
+        }
+
+        .education h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #e0e0e0;
+        }
+
+        .education-item .degree {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .education-item .year {
+            float: right;
+            color: #7f8c8d;
+        }
+
+        .education-item .institution {
+            color: #555;
+            margin-top: 3px;
+        }
+
+        /* Other Sections */
         section {
             margin-bottom: 50px;
             padding: 30px 0;
         }
 
-        h2 {
+        section h2 {
             font-size: 2em;
             margin-bottom: 25px;
             color: #2c3e50;
@@ -150,38 +235,7 @@
             padding-bottom: 10px;
         }
 
-        h3 {
-            font-size: 1.3em;
-            margin: 20px 0 10px 0;
-            color: #34495e;
-        }
-
-        /* Education Items */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .education-item {
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
-        }
-
-        .degree {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .institution {
-            color: #7f8c8d;
-            font-style: italic;
-        }
-
-        /* Research Papers */
+        /* Papers */
         .paper {
             margin-bottom: 30px;
             padding: 25px;
@@ -207,7 +261,7 @@
             color: #555;
         }
 
-        /* Teaching Items */
+        /* Teaching */
         .teaching-item {
             margin-bottom: 25px;
             padding: 20px;
@@ -215,9 +269,14 @@
             border-left: 4px solid #3498db;
         }
 
-        .teaching-item ul {
-            margin-left: 20px;
-            margin-top: 10px;
+        .teaching-item h3 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .teaching-item p {
+            margin: 5px 0;
         }
 
         /* Photo Gallery */
@@ -265,6 +324,20 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .home-content {
+                flex-direction: column;
+            }
+
+            .left-column {
+                flex: 1;
+                max-width: 100%;
+            }
+
+            .education-item .year {
+                float: none;
+                display: block;
+            }
+
             nav .nav-container {
                 flex-direction: column;
                 gap: 15px;
@@ -273,21 +346,6 @@
             nav .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
-            }
-
-            .hero-section {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .profile-img {
-                width: 200px;
-                height: 200px;
-            }
-
-            .education-grid {
-                grid-template-columns: 1fr;
             }
 
             .photo-gallery {
@@ -300,10 +358,9 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
-            <div class="name">Your Name</div>
+            <div class="name">Hyunji Kim</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#education">Education</a>
                 <a href="#research">Research</a>
                 <a href="#teaching">Teaching</a>
                 <a href="#personal">Personal</a>
@@ -313,83 +370,130 @@
 
     <!-- Main Container -->
     <div class="container">
-        <!-- Hero Section: Photo + About Me -->
-        <div id="home" class="hero-section">
-            <div class="photo-container">
-                <img src="https://via.placeholder.com/250" alt="Profile Photo" class="profile-img">
-            </div>
-            
-            <div class="about-container">
-                <h1>Your Name</h1>
-                <p class="title">PhD Candidate in Economics</p>
+        <!-- Home Section - All in One View -->
+        <div id="home" class="home-content">
+            <!-- Left Column - Photo and Contact -->
+            <div class="left-column">
+                <img src="https://via.placeholder.com/300x400" alt="Hyunji Kim" class="profile-img">
                 
-                <div class="intro-text">
-                    <p><strong>I am a PhD Candidate in Economics currently on the 2025-2026 job market!</strong></p>
-                    <p>My research interest is applied microeconomics and development economics with a special focus on gender and climate change.</p>
-                    <p>Feel free to reach out at hjkim26@uw.edu — I'd love to connect.</p>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:hjkim26@uw.edu">hjkim26@uw.edu</a></p>
+                    <p><strong>Address:</strong><br>
+                    Department of Economics<br>
+                    University of Washington<br>
+                    Seattle, WA 98195</p>
+                    <p><strong>CV:</strong><br>
+                    <a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
+                </div>
+            </div>
+
+            <!-- Right Column - Bio, Interests, Education -->
+            <div class="right-column">
+                <div class="name-title">
+                    <h1>Hyunji Kim</h1>
+                    <p class="subtitle">PhD Candidate in Economics</p>
                 </div>
 
-                <div class="hero-contact">
-                    <p><strong>📧 Email:</strong> <a href="mailto:hjkim26@uw.edu">hjkim26@uw.edu</a></p>
-                    <p><strong>📍 Office:</strong> Department of Economics, Savery Hall 319H</p>
-                    <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/hyun-ji-kim-44b897308/" target="_blank">linkedin.com/in/hyun-ji-kim-44b897308</a></p>
-                    <p><strong>📄 CV:</strong> <a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
+                <!-- Biography -->
+                <div class="biography">
+                    <h2>Biography</h2>
+                    <p><span class="highlight">I am a PhD Candidate in Economics at the University of Washington, on the 2025-2026 job market!</span></p>
+                    <p>My research focuses on applied microeconomics, with particular interests in health economics, development economics, and gender issues. I examine how public policies and environmental shocks affect vulnerable populations in developing countries.</p>
+                    <p>My job market paper studies the unintended consequences of maternal health programs in rural India, specifically how cash incentives and health worker access influence fertility decisions and pregnancy outcomes among different age groups of women.</p>
+                </div>
+
+                <!-- Interests and Education Side by Side -->
+                <div style="display: flex; gap: 40px; margin-top: 30px;">
+                    <!-- Interests -->
+                    <div class="interests" style="flex: 1;">
+                        <h2>Interests</h2>
+                        <ul>
+                            <li>Applied Microeconomics</li>
+                            <li>Health Economics</li>
+                            <li>Development Economics</li>
+                            <li>Gender Economics</li>
+                            <li>Climate Change</li>
+                            <li>Labor Economics</li>
+                            <li>Public Economics</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="education" style="flex: 1;">
+                        <h2>Education</h2>
+                        <div class="education-item">
+                            <div>
+                                <span class="degree">PhD in Economics</span>
+                                <span class="year">2026 (Expected)</span>
+                            </div>
+                            <div class="institution">University of Washington</div>
+                        </div>
+                        <div class="education-item">
+                            <div>
+                                <span class="degree">MA in Economics</span>
+                                <span class="year">2022</span>
+                            </div>
+                            <div class="institution">University of Washington</div>
+                        </div>
+                        <div class="education-item">
+                            <div>
+                                <span class="degree">MA in Economics</span>
+                                <span class="year">2020</span>
+                            </div>
+                            <div class="institution">University of Seoul, South Korea</div>
+                        </div>
+                        <div class="education-item">
+                            <div>
+                                <span class="degree">BA in Economics</span>
+                                <span class="year">2018</span>
+                            </div>
+                            <div class="institution">University of Seoul, South Korea</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <div class="degree">PhD in Economics</div>
-                    <div class="institution">University of Washington</div>
-                    <div>2026 (Expected)</div>
-                </div>
-                <div class="education-item">
-                    <div class="degree">MA in Economics</div>
-                    <div class="institution">University of Washington</div>
-                    <div>2022</div>
-                </div>
-                <div class="education-item">
-                    <div class="degree">BA in Economics</div>
-                    <div class="institution">University of Seoul</div>
-                    <div>2018</div>
-                </div>
-            </div>
-        </section>
 
         <!-- Research Section -->
         <section id="research">
             <h2>Research</h2>
             
             <div class="paper">
-                <div class="paper-title">Job Market Paper: Maternal Health Programs and the Continuation of Unintended Pregnancies </div>
+                <div class="paper-title">Job Market Paper: Maternal Health Programs and the Continuation of Unintended Pregnancies</div>
                 <div class="paper-abstract">
-                    This paper examines how maternal and child health (MCH) programs influence fertility and the continuation of unintended pregnancies. I study a large-scale MCH program in India that offered cash incentives for institutional delivery and engaged community health workers, using a difference-in-differences design exploiting variation in eligibility across states. The program generated two distinct responses: fertility declined among older women, while younger women became more likely to carry unintended pregnancies to term, increasing unplanned births. Mechanism analysis shows that increased access to community health workers was a key driver of the rise in unplanned births. Further evidence points to two behavioral responses underlying this channel: women’s desired fertility declined more than men’s, creating spousal disagreement that often results in more unintended pregnancies being carried to term in male-dominated settings; and contact with health workers led to more negative attitudes toward abortion. These findings suggest that while MCH programs aim to improve maternal care, they can also shape post-conception decisions in unintended ways.
+                    I examine unintended consequences of a Maternal and Child Health (MCH) program in rural India that offered cash incentives and health worker access to promote institutional delivery. Using a difference-in-differences design, I find the program reduced fertility among older women but increased the likelihood that younger women carried unintended pregnancies to term, mainly through greater exposure to community health workers, which altered fertility preferences and fostered more negative attitudes toward abortion.
+                    <br><br>
+                    <em>Scheduled presentations: ASSA 2026, SEA 2025</em>
                 </div>
             </div>
 
             <div class="paper">
-                <div class="paper-title">Working Paper: Hot Weather, Hot Tempers: the Impact of Heat Waves on Intimate Partenr Violence in Peru </div>
+                <div class="paper-title">Working Paper: Hot Weather, Hot Tempers: The Impact of Heat Waves on Intimate Partner Violence in Peru</div>
                 <div class="paper-abstract">
-                    This paper examines the causal relationship between heat waves and intimate partner violence (IPV), focusing on immediate responses to extreme temperature shocks. The findings reveal that heat waves increase IPV in Peru, with a more pronounced effect in urban areas. Two complementary pathways are identified: First, heat waves worsen male spouses' mental health in urban settings. Second, heat waves intensify community violence, fostering an environment where violent behaviors become more normalized. This normalization is accompanied by a shift in attitudes that make violence more acceptable, reinforcing the impact of heat waves on IPV. These findings highlight the significant impact of severe climate events on intra-household dynamics and underscore the need for targeted interventions for urban populations during heat waves.
+                    I examine the causal relationship between heat waves and intimate partner violence (IPV) in Peru, focusing on immediate responses to extreme temperature shocks. The analysis shows that heat waves increase IPV, with stronger effects in urban areas. Two mechanisms drive this pattern: worsening male mental health and intensifying community violence, which can normalize violent behavior and reinforce its acceptance.
+                    <br><br>
+                    <em>Under Review | Scheduled presentations: ASSA 2026, SEA 2025</em>
                 </div>
             </div>
 
             <div class="paper">
-                <div class="paper-title">Working Paper: Climate Shocks and Farmers' Responses: Evidence from Indonesia (with Hyelim Son and Xing Xia) </div>
+                <div class="paper-title">Working Paper: Farmers' Responses to Rainfall and Temperature Shock in Indonesia</div>
                 <div class="paper-abstract">
-                    This paper examines how Indonesian farmers respond to extreme temperature and rainfall shocks. Exploiting within-subdistrict variation over time, we find that both extreme temperatures and low monsoon rainfall reduce rural household expenditure. In response, households deplete both productive and liquid assets. Paradoxically, adverse climate shocks increase agricultural labor intensity. Low rainfall leads to more hours worked in agriculture and fewer in non-agricultural sectors, particularly among rice-farming men and in irrigated areas. In contrast, high rainfall reduces agricultural labor and increases non-agricultural work. Temperature shocks are associated with some increases in agricultural work hours and do not lead to meaningful shifts into non-agricultural work. Our findings suggest that rural households are better equipped to adjust to rainfall variability --- likely due to existing irrigation infrastructure --- than to rising temperatures, which remain difficult to mitigate.
-            </div>
+                    <em>with Hyelim Son and Xing Xia</em><br><br>
+                    This paper examines how Indonesian farmers respond to extreme temperature and rainfall shocks. Both shocks reduce household expenditure and lead to asset depletion. Low rainfall increases agricultural work and reduces non-agricultural work, especially among rice-farming men, while temperature shocks have smaller labor effects. The results suggest that households can better adapt to rainfall variability than to rising temperatures.
+                    <br><br>
+                    <em>Scheduled presentations: APPAM 2025</em>
+                </div>
             </div>
 
             <div class="paper">
-                <div class="paper-title">Work in Progress: Violence and Child Marriage in Northern Nigeria (with Isabelle Cohen)</div>
+                <div class="paper-title">Work in Progress: Violence and Child Marriage in Northern Nigeria</div>
                 <div class="paper-abstract">
-                    This study examines how adolescent exposure to armed conflict influences marriage timing in Northern Nigeria. Leveraging novel individual-level survey data—collected in 2022 among married girls aged 16 to 22 in Kaduna State—and geocoded conflict data from ACLED, we estimate the effect of conflict exposure during adolescence on early marriage. Girls exposed to violence near typical marriage ages are significantly more likely to marry early. Disruptions to education appear to be a key mechanism: conflict-exposed girls complete fewer years of schooling, suggesting that families may substitute early marriage for continued education in insecure environments. Conflict exposure also increases early fertility and the likelihood of polygynous unions. These findings highlight how localized violence can shift life-cycle decisions, contributing to the literature on early marriage, human capital, and the long-run impacts of conflict.
-             </div>
+                    <em>with Isabelle Cohen</em><br><br>
+                    We examine how adolescent exposure to armed conflict influences marriage timing in Northern Nigeria. Using survey data from married girls aged 16–22 in Kaduna State and geocoded conflict events, we find that girls exposed to violence near typical marriage ages are more likely to marry early and have less schooling. Conflict exposure also increases early fertility and the likelihood of polygynous unions, underscoring how localized violence can alter life-cycle decisions.
+                </div>
             </div>
         </section>
 
@@ -398,35 +502,43 @@
             <h2>Teaching Experience</h2>
             
             <div class="teaching-item">
-                <h3>Instructor - Principles of Microeconomics</h3>
-                <p><strong>Format:</strong> In-person & Online, Summer 2022</p>
-                <p><strong>Instructor Rating:</strong> 8.04/9</p>
-                <p><strong>Select Student Quotes:</strong></p>
-                <ul>
-                    <li>"Excellent instructor who made complex concepts accessible"</li>
-                    <li>"Very engaging and always available for help"</li>
-                    <li>"Best economics professor I've had"</li>
-                </ul>
+                <h3>Instructor of Record - University of Washington Bothell</h3>
+                <p><strong>Course:</strong> B-BUS 220 Introduction to Microeconomics</p>
+                <p><strong>Terms:</strong> Winter 2025, Spring 2025, Fall 2025</p>
+                <p><strong>Instructor Rating:</strong> 4.3/5</p>
             </div>
 
             <div class="teaching-item">
-                <h3>Teaching Assistant</h3>
-                <p><strong>Courses:</strong> Intermediate Microeconomics, Health Economics</p>
-                <p><strong>Terms:</strong> Fall 2021, 2022, 2023</p>
-                <p><strong>Responsibilities:</strong> Led weekly recitation sessions, held office hours, graded assignments and exams</p>
+                <h3>Instructor of Record - University of Washington</h3>
+                <p><strong>Course:</strong> ECON 201 Introduction to Macroeconomics</p>
+                <p><strong>Term:</strong> Winter 2022</p>
+                <p><strong>Instructor Rating:</strong> 4.7/5</p>
             </div>
 
             <div class="teaching-item">
-                <h3>Guest Lecturer</h3>
-                <p><strong>Topics:</strong> Healthcare Markets, Applied Econometrics</p>
-                <p><strong>Terms:</strong> Fall 2020, 2021, 2022, 2023</p>
-                <p><strong>Courses:</strong> Health Economics, Public Economics</p>
+                <h3>Instructor of Record - University of Washington</h3>
+                <p><strong>Course:</strong> ECON 200 Introduction to Microeconomics</p>
+                <p><strong>Terms:</strong> Summer 2022, Fall 2022, Winter 2023, Fall 2024</p>
+                <p><strong>Instructor Rating:</strong> 3.9/5</p>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Teaching Assistant - University of Washington</h3>
+                <p><strong>Course:</strong> ECON 602 Teaching Introductory Economics</p>
+                <p><strong>Term:</strong> Fall 2024</p>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Teaching Assistant - University of Washington</h3>
+                <p><strong>Course:</strong> ECON 200 Introduction to Microeconomics</p>
+                <p><strong>Terms:</strong> Winter 2021 – Fall 2023, Spring 2024</p>
+                <p><strong>Instructor Rating:</strong> 4.5/5</p>
             </div>
         </section>
 
         <!-- Personal Section -->
         <section id="personal">
-            <h2>Personal Interests</h2>
+            <h2>Personal</h2>
             <p style="font-size: 1.1em; margin-bottom: 20px;">When I'm not researching, you can find me exploring national parks, running races, and traveling the world!</p>
             
             <div class="photo-gallery">
@@ -459,7 +571,7 @@
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2024 Your Name. All rights reserved. | Built with HTML & CSS</p>
+            <p>&copy; 2024 Hyunji Kim. All rights reserved.</p>
         </footer>
     </div>
 </body>
