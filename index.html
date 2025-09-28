@@ -115,6 +115,34 @@
             text-decoration: underline;
         }
 
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .contact-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .contact-icons a:hover {
+            background-color: #3498db;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+
         /* Right Column - Content */
         .right-column {
             margin-top: 50px;
@@ -388,14 +416,14 @@
             <div class="left-column">
                 <img src="images/profile.jpeg" alt="Hyunji Kim" class="profile-img">
                 
-                <div class="contact-info">
-                    <h1>Hyunji Kim</h1>
-                    <p class="subtitle">PhD Candidate in Economics</p>
-                    <p><strong>Email:</strong><br>
-                    <a href="mailto:hjkim26@uw.edu">hjkim26@uw.edu</a></p>
-                    <p><strong>CV:</strong><br>
-                    <a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
-                </div>
+
+            <div class="contact-info">
+                <h3>Hyunji Kim</h3>
+                <p class="subtitle">PhD Candidate in Economics</p>
+                <p style="margin: 20px 0; font-size: 2em;">
+                    <a href="mailto:hjkim26@uw.edu" title="Email" style="text-decoration: none; margin: 0 10px;">📧</a>
+                    <a href="cv.pdf" target="_blank" title="Download CV" style="text-decoration: none; margin: 0 10px;">📄</a>
+                </p>
             </div>
 
             <!-- Right Column - Bio, Interests, Education -->
